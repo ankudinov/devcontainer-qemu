@@ -3,6 +3,11 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu
 ARG _ARTOKEN
 ARG _AR_FILE_PATH
 
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    && qemu-kvm \
+    && libvirt-daemon
+
 # add ceos-lab image is _ARTOKEN is not empty
 RUN if [ ! -z ${_ARTOKEN} ]; \
     then \
