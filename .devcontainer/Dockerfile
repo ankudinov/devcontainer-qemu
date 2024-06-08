@@ -5,6 +5,9 @@ ARG CLAB_VERSION
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     qemu-kvm \
+    virt-viewer \
+    virt-manager \
+    bridge-utils \
     libvirt-daemon \
     python3 \
     python3-pip
