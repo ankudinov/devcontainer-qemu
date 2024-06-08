@@ -5,7 +5,9 @@ ARG CLAB_VERSION
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     qemu-kvm \
-    libvirt-daemon
+    libvirt-daemon \
+    python3 \
+    python3-pip
 
 # add ceos-lab image is _ARTOKEN is not empty
 # RUN if [ ! -z ${_ARTOKEN} ]; \
