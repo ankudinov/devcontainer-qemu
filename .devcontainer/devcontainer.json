@@ -3,17 +3,34 @@
 	"build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "_AR_FILE_PATH": "/support/download/CloudVision/CloudVision Portal/Active Releases/2023.1/2023.1.1/cvp-2023.1.1-kvm.tgz",
-            "_ARTOKEN": "${localEnv:ARTOKEN}"
+            "CLAB_VERSION": "0.54.2"
         }
     },
-    "remoteEnv": {
-		"CONTAINERWSF": "${containerWorkspaceFolder}"
-	},
+    "containerEnv": {
+        "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
+        "CONTAINERWSF": "${containerWorkspaceFolder}",
+        "CVP_VERSION": "2024.1.2"
+    },
+    "secrets": {
+        "ARTOKEN": {
+          "description": "token to auto-download EOS images from arista.com."
+          // "documentationUrl": "https://example.com/link/to/info"
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "version": "latest",
+            "dockerDashComposeVersion": "none"
+        },
+        // Add sshd to support gh cli codespace cp.
+        "ghcr.io/devcontainers/features/sshd:1": {
+            "version": "latest"
+        }
+    },
     // set minimum host requirements for codespaces
     "hostRequirements": {
         "cpus": 16,
         "memory": "64gb"
     },
-    "onCreateCommand": "cd /home/vscode/tmp; sudo tar -zxvf cvp-kvm.tgz"
+    "postCreateCommand": "postCreate.sh"
 }
