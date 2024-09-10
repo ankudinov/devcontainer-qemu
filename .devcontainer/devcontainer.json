@@ -17,16 +17,6 @@
           // "documentationUrl": "https://example.com/link/to/info"
         }
     },
-    "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {
-            "version": "latest",
-            "dockerDashComposeVersion": "none"
-        },
-        // Add sshd to support gh cli codespace cp.
-        "ghcr.io/devcontainers/features/sshd:1": {
-            "version": "latest"
-        }
-    },
     // set minimum host requirements for codespaces
     "hostRequirements": {
         "cpus": 16,
