@@ -1,5 +1,15 @@
 {
     "image": "ghcr.io/ankudinov/devcontainer-qemu/cvp-base:latest",
+    "containerEnv": {
+        "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
+        "CONTAINERWSF": "${containerWorkspaceFolder}",
+        "CVP_VERSION": "2024.1.2"
+    },
+    "secrets": {
+        "ARTOKEN": {
+            "description": "token to auto-download EOS images from arista.com."
+        }
+    },
     // set minimum host requirements for codespaces
     "hostRequirements": {
         "cpus": 16,
