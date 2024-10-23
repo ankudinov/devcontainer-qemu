@@ -1,3 +1,8 @@
 {
-    "image": "ghcr.io/ankudinov/devcontainer-qemu/cvp-base:latest"
+    "image": "ghcr.io/ankudinov/devcontainer-qemu/cvp-base:latest",
+    // set minimum host requirements for codespaces
+    "hostRequirements": {
+        "cpus": 16,
+        "memory": "64gb"
+    }
 }
