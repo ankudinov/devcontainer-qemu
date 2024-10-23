@@ -11,6 +11,9 @@ on:
       - .github/workflows/build-cvp-base.yml
       - containers/cvp-base/**
 
+permissions:
+  packages: write
+
 jobs:
   build_image:
     runs-on: ubuntu-22.04
