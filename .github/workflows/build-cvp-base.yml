@@ -41,7 +41,7 @@ jobs:
       - name: Pre-build dev container image 🔨
         uses: devcontainers/ci@v0.3
         with:
-          subFolder: containers/build-with-qemu
+          subFolder: containers/cvp-base
           imageName: ghcr.io/${{ github.repository }}/cvp-base
           imageTag: latest
           platform: linux/arm64/v8,linux/amd64
