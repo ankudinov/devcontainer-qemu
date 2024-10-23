@@ -1,7 +1,5 @@
 FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu
 
-ARG CLAB_VERSION
-
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     qemu-kvm \
