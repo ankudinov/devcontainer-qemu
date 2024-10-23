@@ -1,36 +1,3 @@
 {
-	"name": "ansible-avd-devcontainer",
-	"build": {
-        "dockerfile": "Dockerfile",
-        "args": {
-            "CLAB_VERSION": "0.54.2"
-        }
-    },
-    "containerEnv": {
-        "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
-        "CONTAINERWSF": "${containerWorkspaceFolder}",
-        "CVP_VERSION": "2024.1.2"
-    },
-    "secrets": {
-        "ARTOKEN": {
-          "description": "token to auto-download EOS images from arista.com."
-          // "documentationUrl": "https://example.com/link/to/info"
-        }
-    },
-    "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {
-            "version": "latest",
-            "dockerDashComposeVersion": "none"
-        },
-        // Add sshd to support gh cli codespace cp.
-        "ghcr.io/devcontainers/features/sshd:1": {
-            "version": "latest"
-        }
-    },
-    // set minimum host requirements for codespaces
-    "hostRequirements": {
-        "cpus": 16,
-        "memory": "64gb"
-    },
-    "postCreateCommand": "postCreate.sh"
+    "image": "ghcr.io/ankudinov/devcontainer-qemu/cvp-base:latest"
 }
