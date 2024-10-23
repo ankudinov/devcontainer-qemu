@@ -1,5 +1,5 @@
 ---
-name: pre-build my 1st carbon now container
+name: pre-build cvp-base container image
 
 env:
   BUILDX_NO_DEFAULT_ATTESTATIONS: 1
