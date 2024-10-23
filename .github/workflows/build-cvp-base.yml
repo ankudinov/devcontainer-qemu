@@ -8,8 +8,8 @@ on:
   push:
     branches: [master]
     paths:
-      - .github/workflows/build-with-qemu.yml
-      - containers/build-with-qemu/**
+      - .github/workflows/build-cvp-base.yml
+      - containers/cvp-base/**
 
 jobs:
   build_image:
