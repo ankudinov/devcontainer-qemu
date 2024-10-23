@@ -1,0 +1,18 @@
+version: 2
+common: 
+   default_route: 172.17.0.1
+   dns: [ 8.8.8.8 ]
+   ntp: [ 0.fedora.pool.ntp.org, 1.fedora.pool.ntp.org ]
+   kube_cluster_network: 10.0.0.0/8
+   device_interface: docker0       # one on which managed devices can reach CVP
+                                # This is optional. Defaults to eth0.
+
+node1:
+   hostname: cvp.domain.com
+   interfaces:
+      eth0:
+         ip_address: 172.17.0.17    # We do not support IPv6 yet
+         netmask: 255.255.0.0
+      eth1:
+         ip_address: 172.18.0.18
+         netmask: 255.255.0.0

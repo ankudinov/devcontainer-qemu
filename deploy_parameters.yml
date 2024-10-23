@@ -1,0 +1,10 @@
+# Linux bridge name for CVP VM
+# the bridge must exist on the KVM host
+bridge_name: docker0
+# directory for KVM images on the target host
+# libvirt_image_directory: /home/vscode/libvirt/images
+libvirt_image_directory: /workspaces/devcontainer-qemu
+qemu_path: /usr/bin/qemu-system-x86_64
+vm_id: 42
+cpu_count: 12
+ram: 32768
