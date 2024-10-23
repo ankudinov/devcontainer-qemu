@@ -17,4 +17,5 @@ RUN chmod +x /bin/postCreate.sh
 
 # install the latest yamllint and eos-downloader
 RUN pip install pyyaml \
-    && pip install "eos-downloader>=0.10.1"
+    && pip install "eos-downloader>=0.10.1" \
+    && pip install --upgrade urllib3
