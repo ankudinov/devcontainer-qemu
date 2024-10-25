@@ -9,7 +9,12 @@ RUN apt-get update \
     libvirt-daemon \
     genisoimage \
     python3 \
-    python3-pip
+    python3-pip \
+    iputils-ping \
+    htop \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
+    && apt-get clean
 
 # copy postCreate script
 COPY ./postCreate.sh /bin/postCreate.sh

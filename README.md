@@ -9,7 +9,7 @@ chmod +x create_cvp_vm_files.py
 tar -xzvf cvp-2024*
 ```
 
-add bridge:
+add bridge and more:
 
 ```bash
 sudo ip link add name br0 type bridge
@@ -19,6 +19,7 @@ sudo ip addr add 192.168.122.1/24 dev br0
 sudo ip link set dev br0 up
 sudo mkdir /etc/qemu
 echo "allow all" | sudo tee /etc/qemu/bridge.conf
+echo "192.168.122.2 cvp.domain.com" | sudo tee -a /etc/hosts
 ```
 
 start VM
