@@ -19,7 +19,6 @@ sudo ip addr add 192.168.122.1/24 dev br0
 sudo ip link set dev br0 up
 sudo mkdir /etc/qemu
 echo "allow all" | sudo tee /etc/qemu/bridge.conf
-echo "192.168.122.2 cvp.domain.com" | sudo tee -a /etc/hosts
 ```
 
 start VM
