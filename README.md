@@ -3,7 +3,10 @@ experiments with qemu in dev container
 
 run:
 
-  ./create_cvp_vm_files.py --yaml_config single_node.yml -p qwerty --deploy_yaml deploy_parameters.yml
+```bash
+./create_cvp_vm_files.py --yaml_config single_node.yml -p qwerty --deploy_yaml deploy_parameters.yml
+tar -xzvf cvp-2024*
+```
 
 add bridge:
 
