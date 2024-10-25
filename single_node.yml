@@ -1,6 +1,6 @@
 version: 2
 common: 
-   default_route: 172.17.0.1
+   default_route: 192.168.122.1
    dns: [ 8.8.8.8 ]
    ntp: [ 0.fedora.pool.ntp.org, 1.fedora.pool.ntp.org ]
    kube_cluster_network: 10.42.0.0/16
