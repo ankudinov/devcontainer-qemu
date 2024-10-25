@@ -4,7 +4,7 @@ common:
    dns: [ 8.8.8.8 ]
    ntp: [ 0.fedora.pool.ntp.org, 1.fedora.pool.ntp.org ]
    kube_cluster_network: 10.42.0.0/16
-   device_interface: docker0       # one on which managed devices can reach CVP
+   device_interface: eth0       # one on which managed devices can reach CVP
                                 # This is optional. Defaults to eth0.
 
 node1:
