@@ -3,7 +3,7 @@
     "containerEnv": {
         "ARISTA_TOKEN": "${localEnv:ARTOKEN}",
         "CONTAINERWSF": "${containerWorkspaceFolder}",
-        "CVP_VERSION": "2024.1.2"
+        "CVP_VERSION": "2024.3.0"
     },
     "secrets": {
         "ARTOKEN": {
