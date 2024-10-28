@@ -24,5 +24,5 @@ echo "allow all" | sudo tee /etc/qemu/bridge.conf
 start VM
 
 ```bash
-sudo qemu-system-x86_64 -m 32G -cpu max -smp 12 -boot d -cdrom /workspaces/devcontainer-qemu/node1-cvp.iso -drive file=/workspaces/devcontainer-qemu/disk1.qcow2,format=qcow2,media=disk -drive file=/workspaces/devcontainer-qemu/disk2.qcow2,format=qcow2,media=disk -nographic -serial mon:stdio -device virtio-net-pci,netdev=user0,mac=00:0c:29:78:01:01 -netdev bridge,id=user0,br=br0
+sudo qemu-system-x86_64 -m 32G -cpu max -smp 12 -boot d -cdrom /workspaces/devcontainer-qemu/node1-cvp.iso -drive file=/workspaces/devcontainer-qemu/disk1.qcow2,format=qcow2,media=disk -drive file=/workspaces/devcontainer-qemu/disk2.qcow2,format=qcow2,media=disk -nographic -serial mon:stdio -device virtio-net-pci,netdev=user0,mac=00:0c:29:78:01:01 -netdev bridge,id=user0,br=docker0
 ```
