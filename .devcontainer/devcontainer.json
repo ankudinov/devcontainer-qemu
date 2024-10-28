@@ -11,8 +11,12 @@
         }
     },
     // set minimum host requirements for codespaces
+    // "hostRequirements": {
+    //     "cpus": 16,
+    //     "memory": "64gb"
+    // }
     "hostRequirements": {
-        "cpus": 16,
-        "memory": "64gb"
+        "cpus": 32,
+        "memory": "128gb"
     }
 }
