@@ -3,6 +3,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     qemu-kvm \
+    qemu-utils \
     virt-viewer \
     virt-manager \
     bridge-utils \
