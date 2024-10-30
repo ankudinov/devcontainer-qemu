@@ -15,6 +15,7 @@
     //     "cpus": 16,
     //     "memory": "64gb"
     // }
+    "runArgs": ["--device=/dev/kvm"],
     "hostRequirements": {
         "cpus": 32,
         "memory": "128gb"
