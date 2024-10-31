@@ -10,14 +10,14 @@
             "description": "token to auto-download EOS images from arista.com."
         }
     },
-    // set minimum host requirements for codespaces
-    // "hostRequirements": {
-    //     "cpus": 16,
-    //     "memory": "64gb"
-    // }
     "runArgs": ["--device=/dev/kvm"],
+    // set minimum host requirements for codespaces
     "hostRequirements": {
-        "cpus": 32,
-        "memory": "128gb"
+        "cpus": 16,
+        "memory": "64gb"
     }
+    // "hostRequirements": {
+    //     "cpus": 32,
+    //     "memory": "128gb"
+    // }
 }
