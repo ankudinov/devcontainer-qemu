@@ -12,4 +12,5 @@ echo "allow all" | sudo tee /etc/qemu/bridge.conf
 
 ardl get cvp --format kvm --version ${CVP_VERSION}
 
-tar -xzvf cvp-2024*
+tar -xzvf cvp-2024* -C /tmp
+mv node1-cvp.iso /tmp/
